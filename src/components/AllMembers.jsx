@@ -16,24 +16,24 @@ function AllMembers({ checkDetails }) {
 
   const handleChange = ({ target }) => {
     const { value } = target;
-    console.log(value);
     setLoginFilter(value);
   };
 
   const handleClick = (user) => {
-    console.log(user);
     checkDetails(user);
   } 
 
   return (
-    <div>
+    <div className="body">
       <input
+        className="input"
         placeholder="Login"
         onChange={handleChange}
       />
       {members && members.filter((member) => member.login.toLowerCase().includes(loginFilter.toLowerCase())).map((member) => (
           <div
             onClick={() => handleClick(member.login)}
+            className="cardDiv"
           >
             <h3>{`Login: ${member.login}`}</h3>
             <img src={member.avatar_url} alt={`${member.login} github avatar`}/>

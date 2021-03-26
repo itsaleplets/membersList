@@ -1,0 +1,43 @@
+.body{
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input {
+  margin-bottom: 20px;
+  width: 330px;
+  height: 40px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  color: #6c757d;
+  background-color: #e9ecef;
+  font-size: 20px;
+  text-align: center;
+}
+
+.cardDiv {
+  width: fit-content;
+  border-radius: 8px;
+  background-color: #e8eddf;
+  box-shadow: 5px 5px 10px #adadad;
+  border: #6c757d solid 1px;
+  padding: 0px 25px 20px;
+  margin: 20px;
+}
+
+button {
+  border-radius: 20px;
+  background-color: white;
+  border: #6c757d solid 1px;
+  outline: none;
+  height: 35px;
+  width: 100px;
+}
+
+img {
+  width: 300px;
+}
+
