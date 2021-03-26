@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 
 function App({ goBack }) {
   const [member, setMember] = useState('');
-  const [starDate, setStartDate] = useState('');
 
   useEffect(() => {
     getMemberDetails();
@@ -12,7 +11,6 @@ function App({ goBack }) {
   const getMemberDetails = async () => {
     const user = 'Acquati';
     const data = await memberDetails(user);
-    console.log(data);
     setMember(data);
   }
 
@@ -25,8 +23,6 @@ function App({ goBack }) {
       <p>{`Repositories: ${member.public_repos}`}</p>
       <p>{`Followers: ${member.followers}`}</p>
       {member && <p>{`Started on: ${member.created_at.slice(0,10)}`}</p>}
-      
-  
     </div>
   );
 }

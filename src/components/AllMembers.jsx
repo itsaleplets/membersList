@@ -1,11 +1,9 @@
 import { getAllMembers } from '../services/api';
 import { useEffect, useState } from 'react';
-import Member from './Member';
 
 function AllMembers({ checkDetails }) {
   const [members, setMembers] = useState('');
   const [loginFilter, setLoginFilter] = useState('');
-  const [showDetails, setShowDetails] = useState(false);
 
   useEffect(() => {
     getData();
@@ -27,22 +25,12 @@ function AllMembers({ checkDetails }) {
     checkDetails(user);
   } 
 
-  // switch(showDetails) {
-  //   case false:
-  //     return  
-  //   case true:
-  //     return <Member user={user} goBack={goBack} />
-  //   default:
-  //     return true;
-  // };
-
   return (
     <div>
       <input
         placeholder="Login"
         onChange={handleChange}
-      /><br /><br />
-      {/* {showDetails ? <Member /> : 'nop'} */}
+      />
       {members && members.filter((member) => member.login.toLowerCase().includes(loginFilter.toLowerCase())).map((member) => (
           <div
             onClick={() => handleClick(member.login)}

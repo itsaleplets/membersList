@@ -24,13 +24,6 @@ function App() {
     default:
       return true;
   };
-
-  return (
-    <div>
-      <AllMembers />
-      {/* <Member /> */}
-    </div>
-  );
 }
 
 export default App;
