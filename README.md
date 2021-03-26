@@ -29,6 +29,7 @@ Esse projeto foi feito utilizando React.js com uma pitada de Hooks.
 
 
 `CSS Desativado` 👀
+
 Rodou o projeto e não tá tão agradável como parece?
 Bom, é que todo o estilo do projeto está comentado. Para ver a mágica acontecer, basta ir no arquivo "App.css" e descomentar.
 
