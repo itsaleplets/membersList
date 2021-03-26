@@ -4,7 +4,7 @@
 
 Olá! Seja bem-vindx a esse repositório!  
 Esse projeto é sobre listar membros de um empresa com suas informações básicas, sendo possível acessar um card com mais detalhes sobre cada membro.
-Foram feitas duas requisições a uma API disponibilizada aqui mesmo, no github. 
+Foram feitas duas requisições a uma API disponibilizada aqui mesmo, pelo github. 
 
  `Instalação do Projeto:` 
 
