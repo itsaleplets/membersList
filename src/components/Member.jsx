@@ -23,7 +23,7 @@ function App({ goBack, user }) {
         <h3>{`Name: ${member.name}`}</h3>
         <p>{`Repositories: ${member.public_repos}`}</p>
         <p>{`Followers: ${member.followers}`}</p>
-        {member && <p>{`Started on: ${member.created_at.slice(0,10)}`}</p>}
+        {member && <p>{`Started in: ${member.created_at.slice(0,10)}`}</p>}
       </div>}
       
     </div>
