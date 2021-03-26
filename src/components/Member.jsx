@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 
 function App({ goBack }) {
   const [member, setMember] = useState('');
+  const [starDate, setStartDate] = useState('');
 
   useEffect(() => {
     getMemberDetails();
@@ -15,18 +16,17 @@ function App({ goBack }) {
     setMember(data);
   }
 
-  const handleClick = () => {
-
-  }
   return (
     <div>
-      <button onClick={handleClick}>
+      <button onClick={goBack}>
         Go Back
       </button>
       <h3>{`Name: ${member.name}`}</h3>
       <p>{`Repositories: ${member.public_repos}`}</p>
       <p>{`Followers: ${member.followers}`}</p>
-      <p>{`Started on: ${member.created_at.slice(0,10)}`}</p>
+      {member && <p>{`Started on: ${member.created_at.slice(0,10)}`}</p>}
+      
+  
     </div>
   );
 }
