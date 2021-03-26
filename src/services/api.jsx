@@ -4,4 +4,10 @@ const getAllMembers = async () => {
   return membersList;
 };
 
-export default getAllMembers;
+const memberDetails = async (user) => {
+  const result = await fetch(`https://api.github.com/users/${user}`)
+  const details = await result.json();
+  return details;
+}
+
+export { getAllMembers, memberDetails };

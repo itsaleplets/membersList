@@ -1,4 +1,4 @@
-import getAllMembers from '../services/api';
+import { getAllMembers } from '../services/api';
 import { useEffect, useState } from 'react';
 
 function AllMembers() {

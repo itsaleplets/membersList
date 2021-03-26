@@ -1,10 +1,12 @@
 import './App.css';
 import AllMembers from './components/AllMembers';
+import Member from './components/Member';
 
 function App() {
   return (
-    <div className="App">
-      <AllMembers />
+    <div>
+      {/* <AllMembers /> */}
+      <Member />
     </div>
   );
 }

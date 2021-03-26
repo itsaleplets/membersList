@@ -1,11 +1,32 @@
+import { memberDetails } from '../services/api';
+import { useEffect, useState } from 'react';
 
-// import AllMembers from './components/AllMembers';
+function App({ goBack }) {
+  const [member, setMember] = useState('');
 
-function App() {
+  useEffect(() => {
+    getMemberDetails();
+  }, [])
+
+  const getMemberDetails = async () => {
+    const user = 'Acquati';
+    const data = await memberDetails(user);
+    console.log(data);
+    setMember(data);
+  }
+
+  const handleClick = () => {
+
+  }
   return (
-    <div className="App">
-      {/* <AllMembers /> */}
-      <h1>oi</h1>
+    <div>
+      <button onClick={handleClick}>
+        Go Back
+      </button>
+      <h3>{`Name: ${member.name}`}</h3>
+      <p>{`Repositories: ${member.public_repos}`}</p>
+      <p>{`Followers: ${member.followers}`}</p>
+      <p>{`Started on: ${member.created_at.slice(0,10)}`}</p>
     </div>
   );
 }
